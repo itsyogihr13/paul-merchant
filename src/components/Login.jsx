@@ -7,7 +7,6 @@ const LoginPage = () => {
   const navigate = useNavigate();
   const [errors, setErrors] = useState("");
   const registerData = useSelector((store) => store.user);
-  console.log("register", registerData);
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -45,7 +44,7 @@ const LoginPage = () => {
 
       if (registeredUser && registeredUser.password === formData.password) {
         alert("User login Successfully");
-        navigate("/userDetail");
+        navigate("/home");
       } else {
         alert("Invalid email or password");
       }
