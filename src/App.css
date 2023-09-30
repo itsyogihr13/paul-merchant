@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+@media (max-width: 768px) {
+  .react-multi-carousel-arrow {
+    display: block !important;
+  }
+}
