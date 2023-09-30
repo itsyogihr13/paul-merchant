@@ -10,17 +10,17 @@ const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
     items: 5,
-    slidesToSlide: 3,
+    slidesToSlide: 2,
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
     items: 3,
-    slidesToSlide: 3,
+    slidesToSlide: 1,
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
     items: 1,
-    slidesToSlide: 2,
+    slidesToSlide: 1,
   },
 };
 const images = [
@@ -102,13 +102,11 @@ export const Home = () => {
           </Link>
 
           <div className="hidden md:flex space-x-6">
-            <a href="/">HOME</a>
-            <a href="/">CORPORATE</a>
-            <a href="/">SERVICES</a>
-            <a href="/">BLOG</a>
-            <a href="/" onClick={scrollToBottomOfPage}>
-              CONTACT US
-            </a>
+            <ul>
+              <l onClick={() => navigate("/")}>HOME</l> <li>CORPORATE</li>{" "}
+              <li>SERVICES</li> <li>BLOG</li>{" "}
+              <li onClick={scrollToBottomOfPage}>CONTACT US</li>
+            </ul>
           </div>
 
           <div className="md:hidden">
@@ -122,7 +120,8 @@ export const Home = () => {
           <div className="md:hidden mt-4">
             <div className="flex flex-col items-center">
               <ul>
-                <li>HOME</li> <li>CORPORATE</li> <li>SERVICES</li> <li>BLOG</li>{" "}
+                <l onClick={() => navigate("/")}>HOME</l> <li>CORPORATE</li>{" "}
+                <li>SERVICES</li> <li>BLOG</li>{" "}
                 <li onClick={scrollToBottomOfPage}>CONTACT US</li>
               </ul>
             </div>
